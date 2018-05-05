@@ -39,10 +39,10 @@ import { get, isNil } from './utils/fn.utils';
 
         <div class="folding" (click)="onSwitchFoldingType()" [ngClass]="tree.foldingCssClass"></div>
 
-        <div class="node-checkbox" *ngIf="settings.showCheckboxes">
+        <label class="node-checkbox" *ngIf="settings.showCheckboxes">
             <input checkbox  type="checkbox" [disabled]="isReadOnly" [checked]="this.tree.checked" (change)="switchNodeCheckStatus()" #checkbox />
             <div class="node-checkbox-styler"></div>
-         </div>
+         </label>
 
         <div class="node-value"
           *ngIf="!shouldShowInputForTreeValue()"
